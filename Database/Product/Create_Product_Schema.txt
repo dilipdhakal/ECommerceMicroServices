@@ -1,0 +1,6 @@
+-- SCHEMA: Product
+
+-- DROP SCHEMA IF EXISTS "Product" ;
+
+CREATE SCHEMA IF NOT EXISTS "Product"
+    AUTHORIZATION postgres;

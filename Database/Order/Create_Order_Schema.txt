@@ -1,0 +1,6 @@
+-- SCHEMA: Orders
+
+-- DROP SCHEMA IF EXISTS "Orders" ;
+
+CREATE SCHEMA IF NOT EXISTS "Orders"
+    AUTHORIZATION postgres;

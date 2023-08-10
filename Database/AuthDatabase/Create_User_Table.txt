@@ -1,0 +1,24 @@
+-- Table: Auth.tblUser
+
+-- DROP TABLE IF EXISTS "Auth"."tblUser";
+
+CREATE TABLE IF NOT EXISTS "Auth"."tblUser"
+(
+    "UserId" integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    "UserName" character varying COLLATE pg_catalog."default" NOT NULL,
+    "Password" character varying COLLATE pg_catalog."default" NOT NULL,
+    "Name" text COLLATE pg_catalog."default",
+    "Address" text COLLATE pg_catalog."default",
+    "ContactNo" text COLLATE pg_catalog."default",
+    "Email" character varying COLLATE pg_catalog."default",
+    "IsLocked" boolean,
+    "Status" boolean,
+    "CreatedBy" integer,
+    "CreatedDate" date,
+    CONSTRAINT "tblUser_pkey" PRIMARY KEY ("UserId")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "Auth"."tblUser"
+    OWNER to postgres;

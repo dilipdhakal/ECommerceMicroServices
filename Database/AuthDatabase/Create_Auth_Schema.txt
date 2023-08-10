@@ -1,0 +1,6 @@
+-- SCHEMA: Auth
+
+-- DROP SCHEMA IF EXISTS "Auth" ;
+
+CREATE SCHEMA IF NOT EXISTS "Auth"
+    AUTHORIZATION postgres;

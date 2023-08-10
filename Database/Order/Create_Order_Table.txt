@@ -1,0 +1,21 @@
+-- Table: Orders.tblOrder
+
+-- DROP TABLE IF EXISTS "Orders"."tblOrder";
+
+CREATE TABLE IF NOT EXISTS "Orders"."tblOrder"
+(
+    "OrderId" integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    "ProductId" integer NOT NULL,
+    "Quantity" money NOT NULL,
+    "Remarks" text COLLATE pg_catalog."default",
+    "OrderBy" integer NOT NULL,
+    "OrderedDate" date,
+    "OrderedModifiedDate" date,
+    "Status" integer,
+    CONSTRAINT "tblOrder_pkey" PRIMARY KEY ("OrderId")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "Orders"."tblOrder"
+    OWNER to postgres;

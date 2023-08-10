@@ -1,0 +1,20 @@
+-- Table: Product.tblProduct
+
+-- DROP TABLE IF EXISTS "Product"."tblProduct";
+
+CREATE TABLE IF NOT EXISTS "Product"."tblProduct"
+(
+    "ProductId" integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    "ProductName" character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    "ProductPrice" money,
+    "Status" boolean,
+    "CreatedBy" integer,
+    "CreatedDate" date,
+    "Batch" character varying COLLATE pg_catalog."default",
+    CONSTRAINT "tblProduct_pkey" PRIMARY KEY ("ProductId")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "Product"."tblProduct"
+    OWNER to postgres;
