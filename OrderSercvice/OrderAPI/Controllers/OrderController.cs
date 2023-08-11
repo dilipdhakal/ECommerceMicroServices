@@ -96,7 +96,7 @@ namespace OrderAPI.Controllers
 
         [Authorize(Roles = "Admin")]
         [HttpPut("UpdateOrder")]
-        public async Task<IActionResult> UpdateOrder(OrderRequestModel model)
+        public async Task<IActionResult> UpdateOrder([FromBody] OrderRequestModel model)
         {
             try
             {
