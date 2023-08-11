@@ -91,7 +91,7 @@ namespace ProductAPI.Controllers
 
         [Authorize(Roles = "Admin")]
         [HttpPut("UpdateProduct")]
-        public async Task<IActionResult> UpdateProduct(ProductRequestModel model)
+        public async Task<IActionResult> UpdateProduct([FromBody] ProductRequestModel model)
         {
             try
             {
