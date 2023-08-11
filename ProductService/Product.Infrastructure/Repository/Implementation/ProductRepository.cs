@@ -100,7 +100,7 @@ namespace Product.Infrastructure.Repository.Implementation
                     existData.CreatedDate = Convert.ToDateTime(model.CreatedDate).ToUniversalTime();
                     _db.Update(existData);
                     await _db.SaveChangesAsync();
-                    return await Response.SuccessAsync("Order Updated Successfully");
+                    return await Response.SuccessAsync("Product Updated Successfully");
                 }
 
             }
